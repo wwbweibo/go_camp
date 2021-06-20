@@ -134,6 +134,7 @@ func (server *GrpcServer) ListenAndServe(ctx context.Context, address string) er
 	grpcServer := grpc.NewServer()
 	server.svr = grpcServer
 	pb.RegisterUserServer(grpcServer, server)
+	fmt.Printf("start grpc server at %s\n", address)
 	return grpcServer.Serve(lis)
 }
 

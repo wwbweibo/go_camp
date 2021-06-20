@@ -43,21 +43,18 @@ func (server *UserServer) Start(ctx context.Context) error {
 	group, cctx := errgroup.WithContext(server.ctx)
 	group.Go(func() error {
 		go func() {
-			select {
-			case <-ctx.Done():
-				fmt.Printf("context done receive, exiting http server")
-				server.httpServer.Shutdown(cctx)
-			}
+			<-ctx.Done()
+			fmt.Printf("context done receive, exiting http server\n")
+			server.httpServer.Shutdown(cctx)
 		}()
 		return server.httpServer.ListenAndServe(cctx, server.config.httpAddress)
 	})
 	group.Go(func() error {
 		go func() {
-			select {
-			case <-ctx.Done():
-				fmt.Printf("context done receive, exiting http server")
-				_ = server.grpcServer.Shutdown(cctx)
-			}
+			<-ctx.Done()
+			fmt.Printf("context done receive, exiting grpc server\n")
+			_ = server.grpcServer.Shutdown(cctx)
+
 		}()
 		return server.grpcServer.ListenAndServe(cctx, server.config.grpcAddress)
 	})

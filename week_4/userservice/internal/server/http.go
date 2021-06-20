@@ -139,6 +139,7 @@ func (server *HttpServer) Login(ctx *gin.Context) {
 
 func (server *HttpServer) ListenAndServe(ctx context.Context, address string) error {
 	server.svr.Addr = address
+	fmt.Printf("start http server at %s\n", address)
 	return server.svr.ListenAndServe()
 }
 func (server *HttpServer) Shutdown(ctx context.Context) error {
