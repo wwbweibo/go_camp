@@ -1,0 +1,44 @@
+GET: rps=0.0 (overall: nan) avg_msec=nan (overall: nan)                                                        ====== GET ======
+  10000 requests completed in 0.07 seconds
+  50 parallel clients
+  10 bytes payload
+  keep alive: 1
+  host configuration "save": 3600 1 300 100 60 10000
+  host configuration "appendonly": no
+  multi-thread: no
+
+Latency by percentile distribution:
+0.000% <= 0.055 milliseconds (cumulative count 1)
+50.000% <= 0.167 milliseconds (cumulative count 5418)
+75.000% <= 0.191 milliseconds (cumulative count 7614)
+87.500% <= 0.223 milliseconds (cumulative count 8778)
+93.750% <= 0.271 milliseconds (cumulative count 9440)
+96.875% <= 0.311 milliseconds (cumulative count 9705)
+98.438% <= 0.351 milliseconds (cumulative count 9851)
+99.219% <= 0.455 milliseconds (cumulative count 9922)
+99.609% <= 0.527 milliseconds (cumulative count 9961)
+99.805% <= 0.623 milliseconds (cumulative count 9982)
+99.902% <= 0.695 milliseconds (cumulative count 9991)
+99.951% <= 0.783 milliseconds (cumulative count 9996)
+99.976% <= 0.807 milliseconds (cumulative count 9998)
+99.988% <= 0.815 milliseconds (cumulative count 9999)
+99.994% <= 0.823 milliseconds (cumulative count 10000)
+100.000% <= 0.823 milliseconds (cumulative count 10000)
+
+Cumulative distribution of latencies:
+0.100% <= 0.103 milliseconds (cumulative count 10)
+83.210% <= 0.207 milliseconds (cumulative count 8321)
+96.660% <= 0.303 milliseconds (cumulative count 9666)
+99.050% <= 0.407 milliseconds (cumulative count 9905)
+99.500% <= 0.503 milliseconds (cumulative count 9950)
+99.790% <= 0.607 milliseconds (cumulative count 9979)
+99.910% <= 0.703 milliseconds (cumulative count 9991)
+99.980% <= 0.807 milliseconds (cumulative count 9998)
+100.000% <= 0.903 milliseconds (cumulative count 10000)
+
+Summary:
+  throughput summary: 151515.16 requests per second
+  latency summary (msec):
+          avg       min       p50       p95       p99       max
+        0.179     0.048     0.167     0.279     0.399     0.823
+

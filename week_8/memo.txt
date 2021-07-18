@@ -1,0 +1,7 @@
+value size 10 bytes, before usage: 905240 bytes, after usage 1676312 bytes , perusage: 77.107200 bytes
+value size 20 bytes, before usage: 905240 bytes, after usage 1756312 bytes , perusage: 85.107200 bytes
+value size 50 bytes, before usage: 905240 bytes, after usage 2076312 bytes , perusage: 117.107200 bytes
+value size 100 bytes, before usage: 905240 bytes, after usage 2636312 bytes , perusage: 173.107200 bytes
+value size 200 bytes, before usage: 905240 bytes, after usage 3756312 bytes , perusage: 285.107200 bytes
+value size 1024 bytes, before usage: 905240 bytes, after usage 14316312 bytes , perusage: 1341.107200 bytes
+value size 5120 bytes, before usage: 905240 bytes, after usage 62956312 bytes , perusage: 6205.107200 bytes
